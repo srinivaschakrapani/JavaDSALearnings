@@ -5,10 +5,10 @@ package CJPractice.Arrays;
 public class MaximumSubarraySumV2 {
     public static void main(String[] args) {
         int []  arr = {100, 200, -310, 50, 5 , -99, 100, 988};
-        maxSubArraySumV1(arr);
+        maxSubArraySumV2(arr);
     }
 
-    public static void maxSubArraySumV1(int[] arr){
+    public static void maxSubArraySumV2(int[] arr){
         int max_sum = Integer.MIN_VALUE;
         for(int s = 0 ; s < arr.length; s ++){
             int local_sum = 0;
