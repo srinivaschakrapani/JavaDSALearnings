@@ -4,14 +4,13 @@ package CJPractice.Arrays;
 // COmplexity O(N^3)
 public class MaximumSubarraySumKadane {
     public static void main(String[] args) {
-        int []  arr = {100, 200, -310, 50, 5 , -99, 900, 100};
-//        int []  arr = {-1, -2, -3};
+//        int []  arr = {100, 200, -310, 50, 5 , -99, 900, 100};
+        int []  arr = {-1, -2, -3};
         maxSubArraySumKadanes(arr);
     }
 
     public static void maxSubArraySumKadanes(int[] arr){
         int max_sum = Integer.MIN_VALUE;
-        int sum = 0;
         int local_max = 0;
         for(int val : arr){
             local_max = local_max + val;
