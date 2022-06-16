@@ -1,4 +1,4 @@
-package CJPractice.ArrayBasics;
+package CJPractice.Arrays;
 
 /*
 Same method to display two different types of Array
