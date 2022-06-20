@@ -1,4 +1,4 @@
-package CJPractice.Arrays;
+package CJPractice.Arrays.Faang;
 //max sub arraty sum with display
 // Using 3 loops
 // COmplexity O(N^3)

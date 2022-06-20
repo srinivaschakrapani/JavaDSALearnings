@@ -1,4 +1,4 @@
-package CJPractice.Arrays;
+package CJPractice.Arrays.Searching;
 
 public class BinarySearchV1 {
 
