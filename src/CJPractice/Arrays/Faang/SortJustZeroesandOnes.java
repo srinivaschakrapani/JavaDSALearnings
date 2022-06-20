@@ -1,4 +1,4 @@
-package CJPractice.Arrays;
+package CJPractice.Arrays.Faang;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;

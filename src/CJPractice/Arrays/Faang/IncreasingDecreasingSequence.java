@@ -1,4 +1,4 @@
-package CJPractice.Basics;
+package CJPractice.Arrays.Faang;
 
 import java.util.Scanner;
 
