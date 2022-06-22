@@ -1,6 +1,6 @@
 package CJPractice.StringBasics;
 
-public class PalindromicSubstring {
+public class PalindromicSubstringV1 {
     public static void main(String[] args) {
         String inp_string = "nitin";
         for (int i = 0; i < inp_string.length(); i++) {
