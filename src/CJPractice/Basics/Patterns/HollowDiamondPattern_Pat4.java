@@ -1,12 +1,10 @@
-package CJPractice.Basics;
+package CJPractice.Basics.Patterns;
 
-import java.util.Scanner;
-
-public class HollowDiamondPattern_Pat6 {
+public class HollowDiamondPattern_Pat4 {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-//        int N = 5;
-        int N = s.nextInt();
+//        Scanner s = new Scanner(System.in);
+        int N = 5;
+//        int N = s.nextInt();
         int row = 1;
         int nst = N;
         int nsp = N - 1;

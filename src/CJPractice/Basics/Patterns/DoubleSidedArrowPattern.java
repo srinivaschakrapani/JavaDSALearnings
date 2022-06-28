@@ -1,4 +1,4 @@
-package CJPractice.Basics;
+package CJPractice.Basics.Patterns;
 
 public class DoubleSidedArrowPattern {
     public static void main(String[] args) {
