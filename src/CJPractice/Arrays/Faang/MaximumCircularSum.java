@@ -26,23 +26,42 @@ public class MaximumCircularSum {
     }
 
     public static void maxCircularSum(int[] arr) {
-        //Expand circular array to Linear array and apply Kadanis algo
-        int[] newarr = new int[arr.length * 2 - 1];
-        for (int i = 0; i < newarr.length; i++) {
-            newarr[i] = arr[i % (arr.length)];
-        }
-        //Kadanis algo
-        int max_sum = Integer.MIN_VALUE;
-        int local_sum = 0;
-        for (int i = 0; i < newarr.length; i++) {
-            local_sum = local_sum + newarr[i];
-            max_sum = Math.max(max_sum, local_sum);
-
-            if (local_sum < 0) {
-                local_sum = 0;
+        //case 1 Max sum is within the array with no wrap around
+        ///Apply kadani
+        int max_sum_1 = Integer.MIN_VALUE;
+        int local_max = 0;
+        for (int x: arr){
+            local_max = local_max + x;
+            max_sum_1 = Math.max(max_sum_1, local_max);
+            if (local_max < 0){
+                local_max = 0;
             }
         }
-        System.out.println(Arrays.toString(newarr));
-        System.out.println(max_sum);
+
+        //Case 2
+        // Max sum is wrapped between the array
+        // which means there is a chunk of elements which result in negative sum
+        //{12, -5, 4, -8, 11} => max sum 11 + 12 = 23
+
+        int total_sum = 0;
+        //Flip the sign of the elements
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = -arr[i];
+            total_sum += arr[i];
+        }
+        //Kadanis algo
+        int max_sum_2 = Integer.MIN_VALUE;
+        local_max = 0;
+        for (int i = 0; i < arr.length; i++) {
+            local_max = local_max + arr[i];
+            max_sum_2 = Math.max(max_sum_2, local_max);
+            if (local_max < 0){
+                local_max = 0;
+            }
+        }
+
+        max_sum_2 = -1 * (total_sum - max_sum_2);
+//        System.out.println("Maximum sum is >> " + Math.max(max_sum_1, max_sum_2));
+        System.out.println(Math.max(max_sum_1, max_sum_2));
     }
 }
