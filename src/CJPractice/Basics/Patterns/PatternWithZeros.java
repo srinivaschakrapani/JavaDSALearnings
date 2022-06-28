@@ -1,4 +1,4 @@
-package CJPractice.Basics;
+package CJPractice.Basics.Patterns;
 
 import java.util.Scanner;
 
