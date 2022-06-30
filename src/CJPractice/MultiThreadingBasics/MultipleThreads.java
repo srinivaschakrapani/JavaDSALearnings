@@ -11,7 +11,7 @@ public class MultipleThreads {
 }
 
 class operations extends Thread{
-    private String operation;
+    private final String operation;
     public operations(String operation){
         this.operation = operation;
     }

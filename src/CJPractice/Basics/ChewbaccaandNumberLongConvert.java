@@ -31,7 +31,7 @@ public class ChewbaccaandNumberLongConvert {
         //Long to Int array
 
         int j = inp_num.length() - 1;
-        int inp_num_arr[] = new int[inp_num.length()];
+        int[] inp_num_arr = new int[inp_num.length()];
         long k = inp_num_orig;
         while (j >= 0) {
             inp_num_arr[j] = (int) k % 10;

@@ -11,7 +11,7 @@ public class SortZeroOneTwo {
         Scanner s = new Scanner(System.in);
 
         int ele_count = s.nextInt();
-        int arr[] = new int[ele_count];
+        int[] arr = new int[ele_count];
         for(int i = 0; i < ele_count; i ++){
             arr[i] = s.nextInt();
         }
