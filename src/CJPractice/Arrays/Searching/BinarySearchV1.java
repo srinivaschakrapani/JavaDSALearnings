@@ -1,5 +1,8 @@
 package CJPractice.Arrays.Searching;
 
+import java.util.LinkedList;
+import java.util.Stack;
+
 public class BinarySearchV1 {
 
     public static void main(String[] args) {
@@ -14,6 +17,9 @@ public class BinarySearchV1 {
     }
 
     public static int binarySearch(int[] arr, int ele) {
+        Stack<Object> stk = new Stack();
+
+
         System.out.println("======= Start Binary Search ======== ");
         System.out.println("======= Search element  >>> " + ele);
         int start = 0;

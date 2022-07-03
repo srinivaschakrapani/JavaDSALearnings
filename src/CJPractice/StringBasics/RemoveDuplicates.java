@@ -9,21 +9,29 @@ import java.util.Scanner;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-        String inp_str = s.next();
+//        Scanner s = new Scanner(System.in);
+//        String inp_str = s.next();
+        removeDupsAndPrint("aazbbdzzqaap");
     }
     public static void removeDupsAndPrint(String inp_str){
         String ans = "";
-        for (int i = 0; i < inp_str.length(); i++) {
-            char last_char_added = inp_str.charAt(i);
-            if (inp_str.charAt(i) == inp_str.charAt(i+1)){
-                last_char_added = inp_str.charAt(i);
+        for (int i = 0; i < inp_str.length();) {
+            char char_to_be_added = inp_str.charAt(i);
+            int j = i+1;
+            for (; j < inp_str.length();) {
+
+                if (inp_str.charAt(i) == inp_str.charAt(j)){
+                    j++;
+                }
+                else {
+                    break;
+                }
 
             }
-            else{
-                last_char_added = inp_str.charAt(i+1);
-            }
+            ans = ans + char_to_be_added + "";
+            i = j;
         }
+        System.out.println(ans);
 
     }
 }
