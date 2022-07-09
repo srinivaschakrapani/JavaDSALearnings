@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class FormBiggestNumber {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
+        StringBuilder sb = new StringBuilder();
         int no_test_cases = s.nextInt();
 
         while (no_test_cases > 0) {
