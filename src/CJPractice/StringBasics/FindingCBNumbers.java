@@ -19,5 +19,53 @@ As there can be multiple solutions, Gautam asks Deepak to find the maximum numbe
  */
 package CJPractice.StringBasics;
 
+import java.util.Scanner;
+
 public class FindingCBNumbers {
+    public static void main(String[] args) {
+//        findCBNumbers("81615");
+        Scanner s = new Scanner(System.in);
+        int inp_num_size = s.nextInt();
+        String inp_num = s.next();
+        findCBNumbers(inp_num);
+
+    }
+
+    public static void findCBNumbers(String number) {
+//        int i = 0;
+        int count_cb_nums = 0;
+        for (int i = 0; i < number.length(); i++) {
+            int j = i + 1;
+            while (i < number.length() && j < number.length() + 1) {
+                String temp_num = number.substring(i, j);
+                if (isCbNumber(temp_num)) {
+                    System.out.println(temp_num);
+                    count_cb_nums++;
+                    i = j;
+                    j = j + 1;
+                } else {
+                    j++;
+                }
+            }
+        }
+        System.out.println(count_cb_nums);
+    }
+
+    public static boolean isCbNumber(String num) {
+        boolean ans = true;
+        long inp_num = Long.parseLong(num);
+
+        if (inp_num == 0 || inp_num == 1) {
+            ans = false;
+        } else if (inp_num == 2 || inp_num == 3 || inp_num == 5 || inp_num == 7 || inp_num == 11 || inp_num == 13 || inp_num == 17 || inp_num == 19 || inp_num == 23 || inp_num == 29) {
+            ans = true;
+
+        } else if (inp_num % 2 == 0 || inp_num % 3 == 0 || inp_num % 5 == 0 || inp_num % 7 == 0 || inp_num % 11 == 0 || inp_num % 13 == 0 || inp_num % 17 == 0 || inp_num % 19 == 0 || inp_num % 23 == 0 || inp_num % 29 == 0) {
+            ans = false;
+
+        }
+        return ans;
+
+    }
+
 }
