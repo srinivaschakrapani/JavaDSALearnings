@@ -16,38 +16,72 @@ Further, the CB number formed can only be a sub-string of the string.
 Ex - In 481, you can not take 41 as CB number because 41 is not a sub-string of 481.
 
 As there can be multiple solutions, Gautam asks Deepak to find the maximum number of CB numbers that can be formed from the given string.
- */
-package CJPractice.StringBasics;
 
-import java.util.Scanner;
+ <<<<< Algo >>>>>>
+ 1. For every length from 1 to length of string
+ 2. Populate the indexes that are visited so far, initial set to false
+ 3. Find the substring of lenght 1
+    3.1 Find if that / or any part of the substring is visited so far
+    3.2 if not find if it is a CB number
+    3.3 if that is Cb number then set the indexes in the visited array to true
+*/
+package CJPractice.StringBasics;
 
 public class FindingCBNumbers {
     public static void main(String[] args) {
 //        findCBNumbers("81615");
-        Scanner s = new Scanner(System.in);
-        int inp_num_size = s.nextInt();
-        String inp_num = s.next();
+//        Scanner s = new Scanner(System.in);
+//        int inp_num_size = s.nextInt();
+//        String inp_num = s.next();
+        String inp_num = "81615";
         findCBNumbers(inp_num);
 
     }
 
     public static void findCBNumbers(String number) {
-//        int i = 0;
         int count_cb_nums = 0;
-        for (int i = 0; i < number.length(); i++) {
-            int j = i + 1;
-            while (i < number.length() && j < number.length() + 1) {
-                String temp_num = number.substring(i, j);
-                if (isCbNumber(temp_num)) {
-                    System.out.println(temp_num);
-                    count_cb_nums++;
-                    i = j;
-                    j = j + 1;
-                } else {
-                    j++;
+
+        //Boolean array to track the indexes that are already visited CB numbers
+        Boolean[] visited_cb_numbers_indexes = new Boolean[number.length()];
+        for (int i = 0; i < visited_cb_numbers_indexes.length; i++) {
+            visited_cb_numbers_indexes[i] = false;
+        }
+
+        //For every length of the string starting from 1 to length
+        for (int len = 1; len <= number.length(); len++) {
+            for (int i = 0; i < number.length(); i = i + 1) {
+                if (len + i <= number.length()) {
+                    String inp_number = number.substring(i, len + i);
+
+                    //Check if the sub string is already visited
+                    boolean visited = false;
+                    int j = i;
+                    while (j < i + len) {
+                        visited = visited || visited_cb_numbers_indexes[j];
+                        j++;
+                    }
+
+                    if (!visited) {
+                        if (isCbNumber(inp_number)) {
+                            count_cb_nums++;
+                            System.out.println("CB Number >> " + inp_number);
+                            j = i;
+                            while (j < i + len) {
+                                visited_cb_numbers_indexes[j] = true;
+                                j++;
+                            }
+                        }
+
+
+                    } else {
+                        continue;
+                    }
+//                    System.out.println("Input number of Length >> " + len + " >> " + inp_number);
                 }
+
             }
         }
+
         System.out.println(count_cb_nums);
     }
 
