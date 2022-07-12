@@ -1,7 +1,7 @@
 // 647. Palindromic Substrings
 package LeetCode.Medium;
 
-public class PalindromicSubstringLinearTime {
+public class PalindromicSubstringQuadraticTime {
     public static void main(String[] args) {
 //        String inp_string = "nitin";
         String inp_string = "aaaa";
