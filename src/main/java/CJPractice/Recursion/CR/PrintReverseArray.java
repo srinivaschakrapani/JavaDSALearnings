@@ -1,4 +1,4 @@
-package CJPractice.Recursion.Classroom;
+package CJPractice.Recursion.CR;
 
 public class PrintReverseArray {
     public static void main(String[] args) {

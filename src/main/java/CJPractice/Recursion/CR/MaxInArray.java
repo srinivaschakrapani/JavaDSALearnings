@@ -1,8 +1,8 @@
-package CJPractice.Recursion.Classroom;
+package CJPractice.Recursion.CR;
 
 public class MaxInArray {
     public static void main(String[] args) {
-        int[] arr = {10, 20, 80, 40, 5};
+        int[] arr = {100,10, 20, 80, 40, 5};
         System.out.println(printMax(arr, 0));
 
     }
@@ -12,8 +12,8 @@ public class MaxInArray {
             return -1 ;
         }
 
-        int max = Math.max(arr[i], printMax(arr, i+1));;
-//        System.out.println(max);
-        return max;
+        int sp = printMax(arr, i +1);
+
+        return Math.max(sp, arr[i]);
     }
 }
