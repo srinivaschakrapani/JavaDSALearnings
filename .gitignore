@@ -2,4 +2,4 @@
 *.metadata*
 *.idea*
 JavaDSALearnings.iml
-*target*
+*target/*
