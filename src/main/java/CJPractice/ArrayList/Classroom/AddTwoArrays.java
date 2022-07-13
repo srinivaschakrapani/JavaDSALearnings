@@ -1,11 +1,11 @@
-package CJPractice.ArrayList.Classroom;
+package main.java.CJPractice.ArrayList.Classroom;
 
 import java.util.ArrayList;
 
 public class AddTwoArrays {
     public static void main(String[] args) {
         int[] arr1 = {9,6,7};
-        int[] arr2 = {9,8,7,5};
+        int[] arr2 = {9,8,7,5}
 
         addTwoArrays(arr1, arr2);
     }
