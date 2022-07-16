@@ -1,4 +1,4 @@
-package CJPractice.ArrayList.Classroom;
+package main.java.CJPractice.ArrayList.Classroom;
 
 import java.util.ArrayList;
 

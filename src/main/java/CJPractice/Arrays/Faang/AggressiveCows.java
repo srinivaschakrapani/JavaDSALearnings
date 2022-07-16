@@ -11,7 +11,7 @@ public class AggressiveCows {
         int stalls = s.nextInt();
         int cows = s.nextInt();
         int[] stalls_loc = new int[stalls];
-        for (int i = 0; i < stalls_loc[stalls_loc.length-1]; i++) {
+        for (int i = 0; i <stalls_loc.length; i++) {
             stalls_loc[i] = s.nextInt();
         }
         //Linearly
@@ -20,6 +20,7 @@ public class AggressiveCows {
         for (int i = 2; i < stalls; i++) {
 
             if (isPossible(stalls_loc, i, cows)) {
+                System.out.println("Cows can be placed at a min distance of " + i + " >>" + true);
                 if(max_dist < i){
                     max_dist = i;
                 }
