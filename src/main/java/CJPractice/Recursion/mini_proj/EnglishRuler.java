@@ -1,8 +1,28 @@
-package CJPractice.Recursion.CR;
+/*
+Output >>>
+---0
+-
+--
+-
+---1
+-
+--
+-
+---2
+-
+--
+-
+---3
+-
+--
+-
+---4
+ */
+package CJPractice.Recursion.mini_proj;
 
 public class EnglishRuler {
     public static void main(String[] args) {
-        englishRuler(3,4);
+        englishRuler(4,3);
 
     }
 
