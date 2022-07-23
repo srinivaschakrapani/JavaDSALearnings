@@ -3,6 +3,10 @@ package CJPractice.Recursion.CR;
 public class SubSequence {
     public static void main(String[] args) {
         printSubSequence("abc", "");
+        System.out.println(" ======== >> << =========");
+        printSubSequence("abcd", "");
+        System.out.println(" ======== >> << =========");
+        printSubSequence("xyzw", "");
     }
 
     public static void printSubSequence(String inp_str, String path){
