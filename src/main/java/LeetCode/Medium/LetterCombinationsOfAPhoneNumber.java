@@ -1,6 +1,6 @@
 /* 17. Letter Combinations of a Phone Number */
 
-package CJPractice.Recursion.CR;
+package LeetCode.Medium;
 
 import java.util.ArrayList;
 import java.util.List;
