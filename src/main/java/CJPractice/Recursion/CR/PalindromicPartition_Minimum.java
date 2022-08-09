@@ -1,6 +1,6 @@
 package CJPractice.Recursion.CR;
 
-public class PalindromicPartition {
+public class PalindromicPartition_Minimum {
     public static void main(String[] args) {
         palindromicPartition("nitin", "");
 
