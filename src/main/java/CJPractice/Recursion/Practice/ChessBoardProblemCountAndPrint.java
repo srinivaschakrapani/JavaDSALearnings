@@ -27,9 +27,11 @@ public class ChessBoardProblemCountAndPrint {
         }
         if (row_idx == N - 1 && col_idx == N - 1) {
             System.out.println(path);
-//            if (!al.contains(path)) {
+            if (!al.contains(path)) {
                 al.add(path);
-//            }
+            } else {
+                System.out.println("Duplicate");
+            }
             return;
         }
 
@@ -51,7 +53,7 @@ public class ChessBoardProblemCountAndPrint {
         }
 
         //Diagonals Moves like a bishop
-        if ((row_idx == col_idx)) {
+        if ((row_idx == col_idx) || (row_idx + col_idx) == N - 1) {
             int step = 1;
             int i = row_idx;
             int j = col_idx;

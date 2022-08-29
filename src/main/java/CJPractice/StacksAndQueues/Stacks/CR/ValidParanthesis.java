@@ -1,4 +1,4 @@
-package CJPractice.StacksAndQueues.Stacks;
+package CJPractice.StacksAndQueues.Stacks.CR;
 /*
 https://leetcode.com/problems/valid-parentheses/submissions/
  */
