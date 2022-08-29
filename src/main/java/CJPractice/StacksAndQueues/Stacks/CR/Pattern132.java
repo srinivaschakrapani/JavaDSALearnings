@@ -1,4 +1,4 @@
-package CJPractice.StacksAndQueues.Stacks;
+package CJPractice.StacksAndQueues.Stacks.CR;
 
 import java.util.ArrayList;
 

@@ -7,21 +7,21 @@ public class StringPermutation {
 
     public static void main(String[] args) {
         printPermutation("cab", "");
-        System.out.println(al);
+//        System.out.println(al);
     }
 
     public static void printPermutation(String inp_str, String path) {
         if (inp_str.isEmpty()) {
             System.out.println(path);
-            if (!al.contains(path)) {
-                al.add(path);
-            }
             return;
         }
-
-        String first_part = inp_str.substring(0, 1);
+        String to_add = inp_str.substring(0, 1);
         String rem_str = inp_str.substring(1);
-        printPermutation(rem_str, path + first_part);
-        printPermutation(rem_str, first_part + path);
+        for (int i = 0; i <= path.length(); i++) {
+//            System.out.println(path);
+//            path = path.substring(0, i) + to_add + path.substring(i, path.length());
+            printPermutation(rem_str, path.substring(0, i) + to_add + path.substring(i, path.length()));
+//            printPermutation(rem_str, path);
+        }
     }
 }
